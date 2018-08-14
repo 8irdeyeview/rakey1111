@@ -76,7 +76,7 @@ settings = {
     "pnharfbot": {},
     "pname": {},
     "pro_name": {},
-    "message":"บัญชีนี้ได้การป้องกันโดย ༺ πနးຫຮี่のีধ์ ༻ ระบบได้ทำการบล็อคคุณอัตโนมัติ",
+    "message":"บัญชีนี้ได้การป้องกัน ระบบได้ทำการบล็อคคุณอัตโนมัติ",
     "comment":"ขอบคุณที่แอดมา",
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
@@ -228,7 +228,7 @@ def sendMessageWithMention(to, lineMID):
         logError(error)
  
 def myhelp():
-    myHelp = "____ ༺ πနးຫຮี่のีধ์ ༻ _____ " + "\n" \
+    myHelp = "____ HELP _____ " + "\n" \
                   "°•About" + "\n" + \
                   "°•คำสั่งโซเชียล" + "\n" + \
                   "°•คำสั่งคิก" + "\n" + \
@@ -260,7 +260,7 @@ def myhelp():
                   "°•Cbroadcastvoice" + "\n" + \
                   "°•รีบอท" + "\n" + \
                   "°•เชคออน์" + "\n" + \
-                  "______༺ πနးຫຮี่のีধ์ ༻_____"
+                  "______HELP_____"
     return myHelp
 
 def listgrup():
@@ -685,14 +685,14 @@ def lineBot(op):
                         grouplist = line.getGroupIdsJoined()
                         contactlist = line.getAllContactIds()
                         blockedlist = line.getBlockedContactIds()
-                        ret_ = "╔══[ ✯༺ πနးຫຮี่のีধ์ ༻ ]"
+                        ret_ = "╔══[ Smartpogo ]"
                         ret_ += "\n╠۝ ชื่อ ═ {}".format(contact.displayName)
                         ret_ += "\n╠۝ กลุ่ม ═ {}".format(str(len(grouplist)))
                         ret_ += "\n╠۝ เพื่อน ═ {}".format(str(len(contactlist)))
                         ret_ += "\n╠۝ บล็อค ═ {}".format(str(len(blockedlist)))
                         ret_ += "\n╠══[สถานะ]"
                         ret_ += "\n╠۝ ผู้สร้าง ═ {}".format(creator.displayName)
-                        ret_ += "\n╚══[ ✯༺ πနးຫຮี่のีধ์ ༻✯ ]"
+                        ret_ += "\n╚══[ Smartpogo ]"
                         line.sendContact(to, owner)
                         line.sendMessage(to, str(ret_))
                     except Exception as e:
@@ -1239,11 +1239,11 @@ def lineBot(op):
                         line.sendMessage(to, text=txt, contentMetadata={'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
                         line.sendMessage(to, "ทั้งหมด {} คน".format(str(len(nama))))  
                 elif text.lower() == 'lurking on':
-                    tz = pytz.timezone("Asia/Jakarta")
+                    tz = pytz.timezone("Asia/Bangkok")
                     timeNow = datetime.now(tz=tz)
                     day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
                     hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
-                    bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+                    bulan = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
                     hr = timeNow.strftime("%A")
                     bln = timeNow.strftime("%m")
                     for i in range(len(day)):
@@ -1285,7 +1285,7 @@ def lineBot(op):
                     timeNow = datetime.now(tz=tz)
                     day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
                     hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
-                    bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+                    bulan = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
                     hr = timeNow.strftime("%A")
                     bln = timeNow.strftime("%m")
                     for i in range(len(day)):
@@ -1309,7 +1309,7 @@ def lineBot(op):
                     timeNow = datetime.now(tz=tz)
                     day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
                     hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
-                    bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+                    bulan = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
                     hr = timeNow.strftime("%A")
                     bln = timeNow.strftime("%m")
                     for i in range(len(day)):
@@ -1333,7 +1333,7 @@ def lineBot(op):
                     timeNow = datetime.now(tz=tz)
                     day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
                     hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
-                    bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+                    bulan = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
                     hr = timeNow.strftime("%A")
                     bln = timeNow.strftime("%m")
                     for i in range(len(day)):
@@ -2545,7 +2545,7 @@ def lineBot(op):
 
                 elif "Cbroadcastvoice " in msg.text:
                     bctxt = msg.text.replace("Cbcvoice ", "")
-                    bc = (".Bdw.. Ini adalah Broadcast.. Salam Owner ARDIAN PURNAMA.. by. RFU boot sekawan")
+                    bc = ("This is Broadcast.. by NAVINKY")
                     cb = (bctxt + bc)
                     tts = gTTS(cb, lang='id', slow=False)
                     tts.save('tts.mp3')
@@ -2598,7 +2598,7 @@ def lineBot(op):
                     timeNow = datetime.now(tz=tz)
                     day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
                     hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
-                    bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+                    bulan = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
                     hr = timeNow.strftime("%A")
                     bln = timeNow.strftime("%m")
                     for i in range(len(day)):
@@ -2657,7 +2657,7 @@ def lineBot(op):
                             line.sendImageWithURL(to, str(path))
                             line.sendMessage(to, str(ret_))
                         except:
-                            line.sendMessage(to, "Pengguna tidak ditemukan")
+                            line.sendMessage(to, "User not found")
                 elif "fotoig" in msg.text.lower():
                     separate = msg.text.split(" ")
                     user = msg.text.replace(separate[0] + " ","")
@@ -2711,7 +2711,7 @@ def lineBot(op):
                         web.headers["User-Agent"] = random.choice(settings["userAgent"])
                         r = web.get("https://www.youtube.com/results", params = params)
                         soup = BeautifulSoup(r.content, "html.parser")
-                        ret_ = "╔══[ ผมการค้นหา ]"
+                        ret_ = "╔══[ ผลการค้นหา ]"
                         datas = []
                         for data in soup.select(".yt-lockup-title > a[title]"):
                             if "&lists" not in data["href"]:
@@ -2756,18 +2756,18 @@ def lineBot(op):
                     msgs+="\n🎎List Friend🎎\n\nTotal Teman : %i" % len(kontak)
                     line.sendMessage(msg.to, msgs)
 
-                elif msg.text in ["รายชื่อบล็อค"]: 
+                elif msg.text in ["รายชื่อที่บล็อค"]: 
                     blockedlist = line.getBlockedContactIds()
                     kontak = line.getContacts(blockedlist)
                     num=1
-                    msgs="═════Daftar Akun Yang di Blocked═════"
+                    msgs="═════Blocked Account═════"
                     for ids in kontak:
                         msgs+="\n[%i] %s" % (num, ids.displayName)
                         num=(num+1)
                     msgs+="\n════════List Blocked════════\n\nTotal Blocked : %i" % len(kontak)
                     line.sendMessage(receiver, msgs)
 
-                elif msg.text in ["มิดเพื่อนทั้งหมด"]: 
+                elif msg.text in ["รายชื่อเพื่อนทั้งหมด"]: 
                     gruplist = line.getAllContactIds()
                     kontak = line.getContacts(gruplist)
                     num=1
@@ -2783,7 +2783,7 @@ def lineBot(op):
                          g = line.getGroup(receiver)
                          line.updateGroup(g)
                          gurl = line.reissueGroupTicket(receiver)
-                         line.sendMessage(receiver,"╔══════════════┓\n╠❂line://ti/g/" + gurl + "\n╠\n╠❂Link Groupnya Tanpa Buka Qr\n╚══════════════┛")
+                         line.sendMessage(receiver,"╔══════════════┓\n╠❂line://ti/g/" + gurl + "\n╠\n╠❂Link Group Without Open Qr\n╚══════════════┛")
 
                 elif msg.text == "Pornhub":
                 	line.sendMessage(receiver,">nekopoi.host\n>sexvideobokep.com\n>memek.com\n>pornktube.com\n>faketaxi.com\n>videojorok.com\n>watchmygf.mobi\n>xnxx.com\n>pornhd.com\n>xvideos.com\n>vidz7.com\n>m.xhamster.com\n>xxmovies.pro\n>youporn.com\n>pornhub.com\n>youjizz.com\n>thumzilla.com\n>anyporn.com\n>brazzers.com\n>redtube.com\n>youporn.com")
@@ -2797,10 +2797,10 @@ def lineBot(op):
                                gcmid = "Error"
                            if settings["lang"] == "JP":
                                line.inviteIntoGroup(receiver,[gcmid])
-                               line.sendMessage(receiver, "Type👉 Invite Pembuat Group Succes")
+                               line.sendMessage(receiver, "Type👉 Invite Maker Group Succes")
                            else:
                                line.inviteIntoGroup(receiver,[gcmid])
-                               line.sendMessage(receiver, "Pembuat Group Sudah di dalam")
+                               line.sendMessage(receiver, "The Group Maker is already inside")
 
                 elif msg.text in ["/uninstall"]:
                     if msg.toType == 2:
@@ -2855,7 +2855,7 @@ def lineBot(op):
 #=============COMMAND KICKER===========================#
                 elif msg.text in ["ลบดำ"]:
                     settings["blacklist"] = {}
-                    line.sendMessage(msg.to,"ทำการลบัญชีดำทั้งหมดเรียร้อย")
+                    line.sendMessage(msg.to,"ทำการลบบัญชีดำทั้งหมดเรียร้อย")
                     print ("Clear Ban")
 
                 elif 'kick' in text.lower():
@@ -2936,8 +2936,8 @@ def lineBot(op):
                                      kicker.kickoutFromGroup(receiver,[jj])
                                      print((receiver,[jj]))
                                  except:
-                                     line.sendMessage(receiver,"sorry bl ke cyduk")
-                                     print ("Blacklist di Kick")
+                                     line.sendMessage(receiver,"sorry")
+                                     print ("Blacklist of Kick")
                 elif "ชื่อเรา: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
@@ -3160,15 +3160,15 @@ def lineBot(op):
                             line.sendMessage(msg.to,"เปิดป้องกันเตะ")
                     if RfuProtect["linkprotect"] == True:
                         if settings["lang"] == "JP":
-                            line.sendMessage(msg.to,"เปิดป้องกันลิ้ง")
+                            line.sendMessage(msg.to,"เปิดป้องกันลิ้งค์")
                         else:
-                            line.sendMessage(msg.to,"เปิดป้องกันลิ้ง")
+                            line.sendMessage(msg.to,"เปิดป้องกันลิ้งค์")
                     else:
                         RfuProtect["linkprotect"] = True
                         if settings["lang"] == "JP":
-                            line.sendMessage(msg.to,"เปิดป้องกันลิ้ง")
+                            line.sendMessage(msg.to,"เปิดป้องกันลิ้งค์")
                         else:
-                            line.sendMessage(msg.to,"เปิดป้องกันลิ้ง")
+                            line.sendMessage(msg.to,"เปิดป้องกันลิ้งค์")
                     if RfuProtect["Protectguest"] == True:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"เปิดป้องกันกลุ่ม")
@@ -3182,15 +3182,15 @@ def lineBot(op):
                             line.sendMessage(msg.to,"เปิดป้องกันกลุ่ม")
                     if RfuProtect["Protectjoin"] == True:
                         if settings["lang"] == "JP":
-                            line.sendMessage(msg.to,"เปิดป้องกันบุคคลภายน้อกเข้ากลุ่ม")
+                            line.sendMessage(msg.to,"เปิดป้องกันบุคคลภายนอกเข้ากลุ่ม")
                         else:
-                            line.sendMessage(msg.to,"เปิดป้องกันบุคคลภายน้อกเข้ากลุ่ม")
+                            line.sendMessage(msg.to,"เปิดป้องกันบุคคลภายนอกเข้ากลุ่ม")
                     else:
                         RfuProtect["Protectjoin"] = True
                         if settings["lang"] == "JP":
-                            line.sendMessage(msg.to,"เปิดป้องกันบุคคลภายน้อกเข้ากลุ่ม")
+                            line.sendMessage(msg.to,"เปิดป้องกันบุคคลภายนอกเข้ากลุ่ม")
                         else:
-                            line.sendMessage(msg.to,"เปิดป้องกันบุคคลภายน้อกเข้ากลุ่ม")
+                            line.sendMessage(msg.to,"เปิดป้องกันบุคคลภายนอกเข้ากลุ่ม")
 
                 elif msg.text.lower() == 'ปิดหมด':
                     if RfuProtect["inviteprotect"] == False:
@@ -3224,15 +3224,15 @@ def lineBot(op):
                             line.sendMessage(msg.to,"ปิดป้องกันเตะ")
                     if RfuProtect["linkprotect"] == False:
                         if settings["lang"] == "JP":
-                            line.sendMessage(msg.to,"ปิดป้องกันเปิดลิ้ง")
+                            line.sendMessage(msg.to,"ปิดป้องกันเปิดลิ้งค์")
                         else:
-                            line.sendMessage(msg.to,"ปิดป้องกันเปิดลิ้ง")
+                            line.sendMessage(msg.to,"ปิดป้องกันเปิดลิ้งค์")
                     else:
                         RfuProtect["linkprotect"] = False
                         if settings["lang"] == "JP":
-                            line.sendMessage(msg.to,"ปิดป้องกันเปิดลิ้ง")
+                            line.sendMessage(msg.to,"ปิดป้องกันเปิดลิ้งค์")
                         else:
-                            line.sendMessage(msg.to,"ปิดป้องกันเปิดลิ้ง")
+                            line.sendMessage(msg.to,"ปิดป้องกันเปิดลิ้งค์")
                     if RfuProtect["Protectguest"] == False:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"ปิดป้องกันกลุ่ม")
@@ -3246,50 +3246,50 @@ def lineBot(op):
                             line.sendMessage(msg.to,"ปิดป้องกันกลุ่ม")
                     if RfuProtect["Protectjoin"] == False:
                         if settings["lang"] == "JP":
-                            line.sendMessage(msg.to,"ปิดป้องกันบุคคลภายน้อกเข้ากลุ่ม")
+                            line.sendMessage(msg.to,"ปิดป้องกันบุคคลภายนอกเข้ากลุ่ม")
                         else:
-                            line.sendMessage(msg.to,"ปิดป้องกันบุคคลภายน้อกเข้ากลุ่ม")
+                            line.sendMessage(msg.to,"ปิดป้องกันบุคคลภายนอกเข้ากลุ่ม")
                     else:
                         RfuProtect["Protectjoin"] = False
                         if settings["lang"] == "JP":
-                            line.sendMessage(msg.to,"ปิดป้องกันบุคคลภายน้อกเข้ากลุ่ม")
+                            line.sendMessage(msg.to,"ปิดป้องกันบุคคลภายนอกเข้ากลุ่ม")
                         else:
-                            line.sendMessage(msg.to,"ปิดป้องกันบุคคลภายน้อกเข้ากลุ่ม")
+                            line.sendMessage(msg.to,"ปิดป้องกันบุคคลภายนอกเข้ากลุ่ม")
 
 #==============FINNISHING PROTECT========================#
                 elif msg.text.lower() == 'เปิดต้อนรับ':
                         if settings["Wc"] == True:
                             if settings["lang"] == "JP":
-                                line.sendMessage(to,"เปิดข้อความต้อนรับมีคนสมาชิกเข้ากลุ่ม   .")
+                                line.sendMessage(to,"เปิดข้อความต้อนรับมีคนเข้ากลุ่ม   .")
                         else:
                             settings["Wc"] = True
                             if settings["lang"] == "JP":
-                                line.sendMessage(to,"เปิดข้อความต้อนรับมีคนสมาชิกเข้ากลุ่ม   ")
+                                line.sendMessage(to,"เปิดข้อความต้อนรับมีคนเข้ากลุ่ม   ")
                 elif msg.text.lower() == 'ปิดต้อนรับ':
                         if settings["Wc"] == False:
                             if settings["lang"] == "JP":
-                                line.sendMessage(to,"ปิดข้อความต้อนรับมีคนสมาชิกเข้ากลุ่ม   ")
+                                line.sendMessage(to,"ปิดข้อความต้อนรับมีคนเข้ากลุ่ม   ")
                         else:
                             settings["Wc"] = False
                             if settings["lang"] == "JP":
-                                line.sendMessage(to,"ปิดข้อความต้อนรับมีคนสมาชิกเข้ากลุ่ม   ")
+                                line.sendMessage(to,"ปิดข้อความต้อนรับมีคนเข้ากลุ่ม   ")
 
                 elif msg.text.lower() == 'เปิดคนออก':
                         if settings["Lv"] == True:
                             if settings["lang"] == "JP":
-                                line.sendMessage(to,"เปิดข้อความต้อนรับมีคนสมาชิกออกกลุ่ม   ")
+                                line.sendMessage(to,"เปิดข้อความต้อนรับมีคนออกกลุ่ม   ")
                         else:
                             settings["Lv"] = True
                             if settings["lang"] == "JP":
-                                line.sendMessage(to,"เปิดข้อความต้อนรับมีคนสมาชิกออกกลุ่ม   ")
+                                line.sendMessage(to,"เปิดข้อความต้อนรับมีคนออกกลุ่ม   ")
                 elif msg.text.lower() == 'ปิดคนออก':
                         if settings["Lv"] == False:
                             if settings["lang"] == "JP":
-                                line.sendMessage(to,"ปิดข้อความต้อนรับมีคนสมาชิกออกกลุ่ม   ")
+                                line.sendMessage(to,"ปิดข้อความต้อนรับมีคนออกกลุ่ม   ")
                         else:
                             settings["Lv"] = False
                             if settings["lang"] == "JP":
-                                line.sendMessage(to,"ปิดข้อความต้อนรับมีคนสมาชิกออกกลุ่ม   ")
+                                line.sendMessage(to,"ปิดข้อความต้อนรับมีคนออกกลุ่ม   ")
 
                 elif text.lower() == 'ลบรัน':
                     gid = line.getGroupIdsInvited()
@@ -3297,7 +3297,7 @@ def lineBot(op):
                     for i in gid:
                         line.rejectGroupInvitation(i)
                     elapsed_time = time.time() - start
-                    line.sendMessage(to, "ลบรันเสร็จแล้วขอรับ")
+                    line.sendMessage(to, "ลบรันเสร็จแล้วครับ")
                     line.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))								
 								
                 elif "Allban" in msg.text:
@@ -3506,7 +3506,7 @@ def lineBot(op):
                 path = line.downloadObjectMsg(msg_id)
                 del Setmain["foto"][sender]
                 line.updateProfilePicture(path)
-                line.sendMessage(to,"Foto berhasil dirubah")
+                line.sendMessage(to,"The photo was successfully changed")
 
         if op.type == 26:
             msg = op.message
@@ -3570,17 +3570,17 @@ def lineBot(op):
                     line.sendText(msg.to,"ขำอะไรนักหนา-.-")	
                 if msg.text in dangerMessage:
                     random.choice(Rfu).kickoutFromGroup(receiver,[sender])
-                    random.choice(Rfu).sendText(msg.to,"ตรวจพบคำสั่งของบอทลบกลุ่ม จำเป็นต้องนำออกเพื่อความปลอดภัยของสมาชิก โจ๊ะๆ ω´)")										
+                    random.choice(Rfu).sendText(msg.to,"ตรวจพบคำสั่งของบอทลบกลุ่ม จำเป็นต้องนำออกเพื่อความปลอดภัยของสมาชิก ω´)")										
         if op.type == 17:
         	dan = line.getContact(op.param2)
         	tgb = line.getGroup(op.param1)
-        	line.sendMessage(op.param1, "สวัสดี {}, Welcome to Group {}\nยินดีต้อนรับหมาน้อย・ω・".format(str(dan.displayName),str(tgb.name)))
+        	line.sendMessage(op.param1, "สวัสดี {}, Welcome to Group {}\nยินดีต้อนรับ・ω・".format(str(dan.displayName),str(tgb.name)))
         	line.sendContact(op.param1, op.param2)
         	line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
         if op.type == 15:
         	dan = line.getContact(op.param2)
         	tgb = line.getGroup(op.param1)
-        	line.sendMessage(op.param1, "อุ้ย!! {}, ได้ออกจากกลุ่ม {} \nยืนไว้อาลัยนะคับ งุงิ・ω・".format(str(dan.displayName),str(tgb.name)))
+        	line.sendMessage(op.param1, "อุ้ย!! {}, ได้ออกจากกลุ่ม {}・ω・".format(str(dan.displayName),str(tgb.name)))
         	line.sendContact(op.param1, op.param2)
         if op.type == 55:
             try:
